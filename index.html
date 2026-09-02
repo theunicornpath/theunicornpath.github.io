@@ -15,8 +15,8 @@
     --red: #e0342c;
     --red-deep: #c22821;
     --ink: #3a2a44;
-    --purple: #C9A0DC;
-    --purple-deep: #7E6280;
+    --purple: #800080;
+    --purple-deep: #800080;
   }
 
   *{ box-sizing: border-box; }
@@ -107,6 +107,21 @@
     margin: 0 0 30px;
   }
 
+  .top-nav{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap: 14px;
+    margin: 0 0 30px;
+  }
+
+  .top-nav .btn{
+    font-size: 0.85rem;
+    padding: 11px 24px;
+  }
+
   .btn{
     display:inline-block;
     font-family:'Playfair Display', serif;
@@ -162,6 +177,12 @@
   <div class="card">
     <h1>Welcome to the Unicorn Path!</h1>
 
+    <div class="top-nav">
+      <a href="updates.html" class="btn purple">Site Updates</a>
+      <a href="about-me.html" class="btn purple">About Me</a>
+      <a href="tarot-readings.html" class="btn purple">Tarot Readings</a>
+    </div>
+
     <div class="intro">
       <p>Hello beloved reader.</p>
       <p>If you're here, chances are that you are interested in the beautiful world of unicorn magics, and know deep down that they are not just a creature of myth.</p>
@@ -181,9 +202,6 @@
 
     <p class="note" style="margin-top:20px;">* please be aware that PDF's listed have not all been personally vetted and to read them with discernment. This is simply a collection of resources I've found.</p>
 
-    <hr class="divider">
-    <a href="updates.html" class="btn purple wide">Site Updates</a>
-    <hr class="divider">    
   </div>
 
 </body>
