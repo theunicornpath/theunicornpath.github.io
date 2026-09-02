@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>placeholder!</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,600&family=Nunito:wght@400;600;700&display=swap');
+
+  :root{
+    --pink: #d94fa0;
+    --pink-deep: #c23a8c;
+    --blue: #7fc3e8;
+    --blue-deep: #5aa9d6;
+    --red: #e0342c;
+    --red-deep: #c22821;
+    --ink: #3a2a44;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    min-height:100%;
+    font-family:'Nunito', sans-serif;
+    color:var(--ink);
+  }
+
+  body{
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,0.9) 0, rgba(255,255,255,0) 3%),
+      radial-gradient(circle at 80% 10%, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 2.5%),
+      radial-gradient(circle at 60% 35%, rgba(255,255,255,0.85) 0, rgba(255,255,255,0) 2%),
+      radial-gradient(circle at 30% 60%, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 2%),
+      radial-gradient(circle at 90% 70%, rgba(255,255,255,0.85) 0, rgba(255,255,255,0) 2.5%),
+      radial-gradient(circle at 45% 85%, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 2%),
+      linear-gradient(160deg, #f6c6dd 0%, #d9b7ea 30%, #b8b0ec 55%, #9ecdec 80%, #bfe3f4 100%);
+    background-attachment: fixed;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding: 48px 20px 0;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  body::after{
+    content:"";
+    position:fixed;
+    left:0; right:0; bottom:-40px;
+    height:220px;
+    background:
+      radial-gradient(ellipse 180px 90px at 10% 100%, #fff 60%, transparent 62%),
+      radial-gradient(ellipse 220px 110px at 35% 100%, #fff 60%, transparent 62%),
+      radial-gradient(ellipse 200px 100px at 65% 100%, #fff 60%, transparent 62%),
+      radial-gradient(ellipse 240px 120px at 90% 100%, #fff 60%, transparent 62%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .card{
+    position:relative;
+    z-index:1;
+    width:100%;
+    max-width:800px;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(6px);
+    border-radius: 40px;
+    padding: 40px 40px 56px;
+    box-shadow: 0 20px 60px rgba(90, 40, 90, 0.18);
+    margin-bottom: 60px;
+  }
+
+  .back-link{
+    display:inline-block;
+    font-family:'Nunito', sans-serif;
+    font-weight:700;
+    font-size: 0.85rem;
+    color: var(--pink-deep);
+    text-decoration:none;
+    margin-bottom: 22px;
+  }
+
+  .back-link:hover{ text-decoration: underline; }
+
+  h1{
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    font-style:italic;
+    font-size: 2.1rem;
+    color: var(--pink-deep);
+    margin: 0 0 26px;
+    text-align:center;
+    text-shadow: 0 2px 0 rgba(255,255,255,0.6);
+  }
+
+  .content{
+    font-family:'Nunito', sans-serif;
+    font-size: 1rem;
+    line-height:1.75;
+    color: #4a3555;
+  }
+
+  .content p{ margin: 0 0 18px; }
+
+  .content h2{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size: 1.3rem;
+    color: var(--pink-deep);
+    margin: 30px 0 12px;
+  }
+
+  .content ul{
+    margin: 0 0 18px;
+    padding-left: 22px;
+  }
+
+  .content li{ margin-bottom: 8px; }
+
+  .divider{
+    border:none;
+    border-top: 1.5px solid rgba(58, 42, 68, 0.5);
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  .placeholder-note{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size: 0.85rem;
+    color: #7a6a88;
+    text-align:center;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <a href="index.html" class="back-link">&larr; Home</a>
+
+    <h1>Updates</h1>
+
+    <div class="content">
+      <p>sep 1st, 2026 - launched website and made guardians of the meadow page.</p>
+  </div>
+
+</body>
+</html>
