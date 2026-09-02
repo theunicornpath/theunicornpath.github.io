@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Unicorn Path!</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,600&family=Nunito:wght@400;600;700&display=swap');
+
+  :root{
+    --pink: #d94fa0;
+    --pink-deep: #c23a8c;
+    --blue: #7fc3e8;
+    --blue-deep: #5aa9d6;
+    --red: #e0342c;
+    --red-deep: #c22821;
+    --ink: #3a2a44;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    min-height:100%;
+    font-family:'Nunito', sans-serif;
+    color:var(--ink);
+  }
+
+  body{
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,0.9) 0, rgba(255,255,255,0) 3%),
+      radial-gradient(circle at 80% 10%, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 2.5%),
+      radial-gradient(circle at 60% 35%, rgba(255,255,255,0.85) 0, rgba(255,255,255,0) 2%),
+      radial-gradient(circle at 30% 60%, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 2%),
+      radial-gradient(circle at 90% 70%, rgba(255,255,255,0.85) 0, rgba(255,255,255,0) 2.5%),
+      radial-gradient(circle at 45% 85%, rgba(255,255,255,0.8) 0, rgba(255,255,255,0) 2%),
+      linear-gradient(160deg, #f6c6dd 0%, #d9b7ea 30%, #b8b0ec 55%, #9ecdec 80%, #bfe3f4 100%);
+    background-attachment: fixed;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding: 48px 20px 0;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  /* soft cloud shapes at page bottom */
+  body::after{
+    content:"";
+    position:fixed;
+    left:0; right:0; bottom:-40px;
+    height:220px;
+    background:
+      radial-gradient(ellipse 180px 90px at 10% 100%, #fff 60%, transparent 62%),
+      radial-gradient(ellipse 220px 110px at 35% 100%, #fff 60%, transparent 62%),
+      radial-gradient(ellipse 200px 100px at 65% 100%, #fff 60%, transparent 62%),
+      radial-gradient(ellipse 240px 120px at 90% 100%, #fff 60%, transparent 62%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .card{
+    position:relative;
+    z-index:1;
+    width:100%;
+    max-width:800px;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(6px);
+    border-radius: 40px;
+    padding: 44px 40px 56px;
+    box-shadow: 0 20px 60px rgba(90, 40, 90, 0.18);
+    text-align:center;
+    margin-bottom: 60px;
+  }
+
+  h1{
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    font-style:italic;
+    font-size: 2.6rem;
+    color: var(--pink-deep);
+    margin: 0 0 22px;
+    text-shadow: 0 2px 0 rgba(255,255,255,0.6);
+  }
+
+  .intro{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size: 1.02rem;
+    line-height:1.65;
+    margin: 0 0 30px;
+    color: #4a3555;
+  }
+
+  .intro p{ margin: 0 0 6px; }
+
+  .btn-list{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap: 16px;
+    margin: 0 0 30px;
+  }
+
+  .btn{
+    display:inline-block;
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size: 0.95rem;
+    color:#fff;
+    text-decoration:none;
+    padding: 13px 30px;
+    border-radius: 999px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    max-width: 90%;
+  }
+
+  .btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  .btn:focus-visible{
+    outline: 3px solid #4a3555;
+    outline-offset: 3px;
+  }
+
+  .btn.pink{ background: linear-gradient(180deg, var(--pink), var(--pink-deep)); }
+  .btn.blue{ background: linear-gradient(180deg, var(--blue), var(--blue-deep)); color:#243a45; }
+  .btn.red{ background: linear-gradient(180deg, var(--red), var(--red-deep)); }
+
+  .btn.wide{ padding: 13px 42px; }
+
+  .divider{
+    border:none;
+    border-top: 1.5px solid rgba(58, 42, 68, 0.5);
+    width: 90%;
+    margin: 26px auto;
+  }
+
+  .note{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size: 0.85rem;
+    color: #4a3555;
+    line-height:1.5;
+    margin: 0 0 10px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Welcome to the Unicorn Path!</h1>
+
+    <div class="intro">
+      <p>Hello beloved reader.</p>
+      <p>If you're here, chances are that you are interested in the beautiful world of unicorn magics, and know deep down that they are not just a creature of myth.</p>
+      <p>A collection of resources, made by me, Delta, are stored here for ease of access, and archival purposes.</p>
+      <p>Please drink plenty of water while you browse this site, and have an open mind.</p>
+    </div>
+
+    <div class="btn-list">
+      <a href="#" class="btn pink wide">Universal Unicorns vs Guardian Unicorns</a>
+      <a href="#" class="btn pink">Guardians of the Meadow</a>
+      <a href="#" class="btn pink">Horn of Enlightenment</a>
+      <a href="#" class="btn pink">Unicorn Colour Corospondances</a>
+      <a href="#" class="btn pink">Signs and Symbols</a>
+      <a href="#" class="btn pink">Unicorn Alchemy</a>
+      <a href="#" class="btn pink">Secret Meadow </a>
+      <a href="#" class="btn pink">Unicorn Rituals </a>
+    </div>
+
+    <hr class="divider">
+
+    <a href="#" class="btn blue">Unicorn PDF's</a>
+
+    <p class="note" style="margin-top:20px;">* please be aware that PDF's listed have not all been personally vetted and to read them with discernment. This is simply a collection of resources I've found.</p>
+
+    <hr class="divider">
+
+    <a href="#" class="btn red wide">Creator Beware &mdash; Azura Dragonfaether</a>
+  </div>
+
+</body>
+</html>
